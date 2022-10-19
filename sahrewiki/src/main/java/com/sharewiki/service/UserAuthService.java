@@ -4,6 +4,11 @@ import com.sharewiki.dto.UserInfoDTO;
 import com.sharewiki.vo.PasswordVO;
 import com.sharewiki.vo.UserVO;
 
+/**
+ * 账号授权
+ * @author IKY
+ * @date 2022/10/19
+ */
 public interface UserAuthService {
 
     /**
