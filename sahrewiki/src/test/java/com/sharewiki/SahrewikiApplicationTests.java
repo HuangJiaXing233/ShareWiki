@@ -1,4 +1,4 @@
-package com.sharewiki.sahrewiki;
+package com.sharewiki;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

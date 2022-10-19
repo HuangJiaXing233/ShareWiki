@@ -1,4 +1,4 @@
-package com.sharewiki.sahrewiki;
+package com.sharewiki;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
