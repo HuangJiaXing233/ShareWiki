@@ -1,9 +1,6 @@
 package com.sharewiki.entity;
 
-import com.baomidou.mybatisplus.annotation.FieldFill;
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,46 +9,46 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
 
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-public class UserAuthEntity {
-
+@TableName("tb_user_info")
+public class UserInfoEntity {
     /**
-     * id
+     * 用户ID
      */
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
     /**
-     * 用户信息id
+     * 邮箱号
      */
-    private Integer userInfoId;
+    private String email;
 
     /**
-     * 用户名
+     * 用户昵称
      */
-    private String username;
+    private String nickname;
 
     /**
-     * 密码
+     * 用户头像
      */
-    private String password;
+    private String avatar;
 
     /**
-     * 登录类型
+     * 用户简介
      */
-    private Integer loginType;
+    private String intro;
 
     /**
-     * 用户登录ip
+     * 个人网站
      */
-    private String ipAddress;
+    private String webSite;
 
     /**
-     * ip来源
+     * 是否禁言
      */
-    private String ipSource;
+    private Integer isDisable;
 
     /**
      * 创建时间
@@ -64,9 +61,4 @@ public class UserAuthEntity {
      */
     @TableField(fill = FieldFill.UPDATE)
     private LocalDateTime updateTime;
-
-    /**
-     * 最近登录时间
-     */
-    private LocalDateTime lastLoginTime;
 }

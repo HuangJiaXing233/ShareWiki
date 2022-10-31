@@ -3,6 +3,7 @@ package com.sharewiki.service;
 import com.sharewiki.dto.UserInfoDTO;
 import com.sharewiki.vo.PasswordVO;
 import com.sharewiki.vo.UserVO;
+import org.springframework.stereotype.Service;
 
 /**
  * 账号授权
@@ -14,9 +15,9 @@ public interface UserAuthService {
     /**
      * 发送邮箱验证码
      *
-     * @param userEmail 邮箱号
+     * @param username 邮箱号
      */
-    void sendCode(String userEmail);
+    void sendCode(String username);
 
     /**
      * 用户注册
